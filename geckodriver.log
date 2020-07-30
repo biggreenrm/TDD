@@ -6,3 +6,39 @@
 1596100200115	Marionette	INFO	Listening on port 56998
 1596100200167	Marionette	WARN	TLS certificate errors will be ignored for this session
 1596100200356	Marionette	INFO	Stopped listening on port 56998
+1596112554844	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofile7qgVVK"
+1596112557764	Marionette	INFO	Listening on port 57891
+1596112557837	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596112558052	Marionette	INFO	Stopped listening on port 57891
+console.error: services.settings: 
+  main/cfr Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1596112694695	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofile9giif4"
+1596112697628	Marionette	INFO	Listening on port 57954
+1596112697735	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596112697970	Marionette	INFO	Stopped listening on port 57954
+1596112823278	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileRTq9vD"
+1596112826026	Marionette	INFO	Listening on port 58025
+1596112826067	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596112826293	Marionette	INFO	Stopped listening on port 58025
+console.error: services.settings: 
+  main/cfr-fxa Signature failed  TypeError: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Failed to fetch region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+1596112863141	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofilenRP6Cu"
+1596112866163	Marionette	INFO	Listening on port 58078
+1596112866227	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596112866492	Marionette	INFO	Stopped listening on port 58078
+1596112927028	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofile5wqxxQ"
+1596112929984	Marionette	INFO	Listening on port 58141
+1596112930031	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596112931389	Marionette	INFO	Stopped listening on port 58141
+1596113035901	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileM0O0Vl"
+1596113038848	Marionette	INFO	Listening on port 58206
+1596113038892	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596113040185	Marionette	INFO	Stopped listening on port 58206
+1596113141585	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofile8J98mk"
+1596113144559	Marionette	INFO	Listening on port 58273
+1596113144579	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596113145944	Marionette	INFO	Stopped listening on port 58273
