@@ -1,14 +1,11 @@
+# django
 from django.urls import resolve
 from django.test import TestCase
+from django.http import HttpRequest
+
+# first-party
 from lists.views import home_page
 
-class SmokeTest(TestCase):
-    """тест на токсичность"""
-    
-    def test_bad_math(self):
-        """Тест: неправильные математические расчёты"""
-        
-        self.assertEqual(1 + 1, 3)
         
 class HomePageTest(TestCase):
     """Тест домашней страницы"""
@@ -20,3 +17,14 @@ class HomePageTest(TestCase):
         # resolve используется дл нахождения функции-обработчика в соответствии с url-адресом
         found = resolve('/')
         self.assertEqual(found.func, home_page)
+    
+    def test_home_page_returns_correct_html(self):
+        """Тест: домашняя страница возращает правильный html"""
+        
+        request = HttpRequest()
+        response = home_page(request)
+        # байт-код response'a (единицы и нули) декодируется в html через utf8
+        html = response.content.decode('utf8')
+        self.assertTrue(html.startswith('<html>'))
+        self.assertIn('<title>To-Do lists</title>', html)
+        self.assertTrue(html.endswith('</html>'))

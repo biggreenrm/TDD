@@ -4,7 +4,7 @@ import unittest
 class NewVisitorTest(unittest.TestCase):
     """Тест для нового посетителя"""
     
-    def setUp():
+    def setUp(self):
         self.browser = webdriver.Firefox()
         
     def tearDown(self):
@@ -15,7 +15,7 @@ class NewVisitorTest(unittest.TestCase):
         # Эрнест где-то услыхал, что списки дел экономят психическую энергию
         # которой ему маловато в последнее время
         # Он решил оценить домашнюю страницу такого приложения
-        browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000')
 
         # Он обращает внимание, что заголовок и шапка страницы намекают на список дел
         self.assertIn('To-Do', self.browser.title)
