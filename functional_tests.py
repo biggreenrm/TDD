@@ -11,6 +11,12 @@ class NewVisitorTest(unittest.TestCase):
         
     def tearDown(self):
         self.browser.quit()
+    
+    def check_for_row_in_list_table(self, row_text):
+        """Подтверждение присутствия строки в таблице списка"""
+        table = self.browser.find_element_by_id('id_list_table')
+        rows = table.find_elements_by_tag_name('tr')
+        self.assertIn(row_text, [row.text for row in rows])
         
     def test_can_start_a_list_and_retrieve_it_later(self):
         """Тест: можно начать список и получить его позже"""
@@ -41,14 +47,17 @@ class NewVisitorTest(unittest.TestCase):
         inputbox.send_keys(Keys.ENTER)
         time.sleep(3)
         
-        table = self.browser.find_element_by_id('id_list_table')
-        rows = table.find_elements_by_tag_name('tr')
-        self.assertIn("1: Привести себя в порядок", [row.text for row in rows])
+        self.check_for_row_in_list_table('1: Привести себя в порядок')
         # Текстовое поле по-прежнему приглашает Эрнеста сделать запись 
         # Что ж, пора "Убрать весь хлам на кухне"
-        self.assertIn("2: Убрать весь хлам на кухне", [row.text for row in rows])
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox.send_keys('Убрать весь хлам на кухне')
+        inputbox.send_keys(Keys.ENTER)
+        time.sleep(3)
+        
         # Страница снова обновляется и теперь показывает оба элемента списка
-
+        self.check_for_row_in_list_table('1: Привести себя в порядок')
+        self.check_for_row_in_list_table("2: Убрать весь хлам на кухне")
         # Эрнесту интересно, запомнит ли сайт еге список. Далее он видит, что 
         # сайт сгенерировал для неге уникальный URL-адрес – об этом
         # выводится небольшой текст с объяснениями.
