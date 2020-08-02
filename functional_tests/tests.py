@@ -1,9 +1,10 @@
+from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-import unittest
 
-class NewVisitorTest(unittest.TestCase):
+
+class NewVisitorTest(LiveServerTestCase):
     """Тест для нового посетителя"""
     
     def setUp(self):
@@ -24,7 +25,7 @@ class NewVisitorTest(unittest.TestCase):
         # Эрнест где-то услыхал, что списки дел экономят психическую энергию
         # которой ему маловато в последнее время
         # Он решил оценить домашнюю страницу такого приложения
-        self.browser.get('http://localhost:8000')
+        self.browser.get(self.live_server_url)
 
         # Он обращает внимание, что заголовок и шапка страницы намекают на список дел
         self.assertIn('To-Do', self.browser.title)
@@ -65,7 +66,3 @@ class NewVisitorTest(unittest.TestCase):
         # Эрнест посещает этот URL-адрес и обнаруживает там свой сохранённый список
 
         # Удовлетворённый своими "амбициозными планами", Эрнест снова засыпает
-
-if __name__ == "__main__":
-    unittest.main(warnings='ignore')
-    
