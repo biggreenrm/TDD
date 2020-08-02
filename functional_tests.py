@@ -56,7 +56,7 @@ class NewVisitorTest(unittest.TestCase):
         time.sleep(3)
         
         # Страница снова обновляется и теперь показывает оба элемента списка
-        self.check_for_row_in_list_table('1: Привести себя в порядок')
+        self.check_for_row_in_list_table("1: Привести себя в порядок")
         self.check_for_row_in_list_table("2: Убрать весь хлам на кухне")
         # Эрнесту интересно, запомнит ли сайт еге список. Далее он видит, что 
         # сайт сгенерировал для неге уникальный URL-адрес – об этом
