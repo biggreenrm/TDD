@@ -30,7 +30,7 @@ class NewVisitorTest(LiveServerTestCase):
                     raise e
                 time.sleep(0.5)
             
-    def test_can_start_a_list_and_retrieve_it_later(self):
+    def test_can_start_a_list_for_one_user(self):
         """Тест: можно начать список и получить его позже"""
         
         # Эрнест где-то услыхал, что списки дел экономят психическую энергию
@@ -68,10 +68,48 @@ class NewVisitorTest(LiveServerTestCase):
         # Страница снова обновляется и теперь показывает оба элемента списка
         self.wait_for_row_in_list_table("1: Привести себя в порядок")
         self.wait_for_row_in_list_table("2: Убрать весь хлам на кухне")
-        # Эрнесту интересно, запомнит ли сайт еге список. Далее он видит, что 
-        # сайт сгенерировал для неге уникальный URL-адрес – об этом
-        # выводится небольшой текст с объяснениями.
-        self.fail('Закончить тест!')
-        # Эрнест посещает этот URL-адрес и обнаруживает там свой сохранённый список
-
         # Удовлетворённый своими "амбициозными планами", Эрнест снова засыпает
+        
+    def test_multiple_users_can_start_lists_at_different_urls(self):
+        """Тест: многочисленные пользователи могут начать списки по разным url"""
+        
+        # Эрнест начинает новый список
+        self.browser.get(self.live_server_url)
+        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox.send_keys('Привести себя в порядок')
+        inputbox.send_keys(Keys.ENTER)
+        self.wait_for_row_in_list_table('1: Привести себя в порядок')
+        
+        # Он замечает, что его список имеет уникальный URL-адрес
+        ernest_list_url = self.browser.current_url
+        self.assertRegex(ernest_list_url, '/lists/.+')
+        self.browser.quit()
+        
+        ### Мы используем новый сеанс браузера, тем самым обеспечивая, чтобы никакая
+        ### информация от Эрнеста не прошла через данные cookie и пр.
+        
+        # Теперь новый пользователь Флавий приходит на сайт
+        self.browser = webdriver.Firefox()
+        
+        # Флавий посещает домашнюю страницу и нет никаких признаков списка Эрнеста
+        self.browser.get(self.live_server_url)
+        page_text = self.browser.find_element_by_tag_name('body').text
+        self.assertNotIn('Привести себя в порядок', page_text)
+        self.assertNotIn('Убрать весь хлам на кухне', page_text)
+        
+        # Флавий начинает новый список, вводя новый элемент. Его список не менее
+        # интересен, чем у Эрнеста
+        inputbox = self.browser.find_element_by_tag_name('id_new_item')
+        inputbox.send_keys('Разбить варваров на севере Британии')
+        inputbox.send_keys(Keys.ENTER)
+        self.wait_for_row_in_list_table('1: Разбить варваров на севере Британии')
+        
+        # Флавий получает уникальный URL-адрес
+        flawiy_list_url = self.browser.current_url
+        self.assertRegex(flawiy_list_url, '/list/.+')
+        self.assertNotEqual(flawiy_list_url, ernest_list_url)
+        
+        # Опять таки нет ни следа от списка Эрнеста
+        page_text = self.browser.browser.find_element_by_tag_name('body').text
+        self.assertNotIn('Привести себя в порядок', page_text)
+        self.assertIn('Разбить варваров на севере Британии', page_text)
