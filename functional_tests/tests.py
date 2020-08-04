@@ -46,7 +46,7 @@ class NewVisitorTest(LiveServerTestCase):
         # Когда он нажимает enter - страница обновляется и теперь страница
         # содержит "1: Привести себя в порядок" в качестве элемента
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(3)
+        time.sleep(1)
         
         self.check_for_row_in_list_table('1: Привести себя в порядок')
         # Текстовое поле по-прежнему приглашает Эрнеста сделать запись 
@@ -54,7 +54,7 @@ class NewVisitorTest(LiveServerTestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Убрать весь хлам на кухне')
         inputbox.send_keys(Keys.ENTER)
-        time.sleep(3)
+        time.sleep(1)
         
         # Страница снова обновляется и теперь показывает оба элемента списка
         self.check_for_row_in_list_table("1: Привести себя в порядок")
