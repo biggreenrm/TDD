@@ -17,20 +17,20 @@ class HomePageTest(TestCase):
         response = self.client.get('/')
         self.assertTemplateUsed(response, 'home.html')
         
-    def test_can_save_POST_request(self):
-        '''Тест: можно сохранить POST-запрос'''
-        self.client.post('/', data={'item_text': 'A new list item'})
-        # сохраняется ли объект и его свойства через POST-запрос?
-        self.assertEqual(Item.objects.count(), 1)
-        new_item = Item.objects.first()
-        self.assertEqual(new_item.text, 'A new list item')
+    # def test_can_save_POST_request(self):
+    #     '''Тест: можно сохранить POST-запрос'''
+    #     self.client.post('/', data={'item_text': 'A new list item'})
+    #     # сохраняется ли объект и его свойства через POST-запрос?
+    #     self.assertEqual(Item.objects.count(), 1)
+    #     new_item = Item.objects.first()
+    #     self.assertEqual(new_item.text, 'A new list item')
      
-    def test_redirects_after_POST(self):
-        """Тест: перенаправление после POST-запроса"""
-        response = self.client.post('/', data={'item_text': 'A new list item'})   
-        # вставить сюда pdb и посмотреть response изнутри
-        self.assertEqual(response.status_code, 302)
-        self.assertEqual(response['location'], '/lists/one-of-a-kind-list-in-the-world/')
+    # def test_redirects_after_POST(self):
+    #     """Тест: перенаправление после POST-запроса"""
+    #     response = self.client.post('/', data={'item_text': 'A new list item'})   
+    #     # вставить сюда pdb и посмотреть response изнутри
+    #     self.assertEqual(response.status_code, 302)
+    #     self.assertEqual(response['location'], '/lists/one-of-a-kind-list-in-the-world/')
 
 
 class ItemModelTest(TestCase):
@@ -54,12 +54,6 @@ class ItemModelTest(TestCase):
         second_saved_item = saved_items[1]
         self.assertEqual(first_saved_item.text, 'The first (ever) list item')
         self.assertEqual(second_saved_item.text, 'Item the second')
-    
-    def test_only_saves_items_when_necessary(self):
-        """Тест: элементы списка сохраняются только по надобности"""
-        
-        self.client.get('/')
-        self.assertEqual(Item.objects.count(), 0)
 
 
 class ListViewTest(TestCase):
@@ -80,3 +74,21 @@ class ListViewTest(TestCase):
         # assertContains (Django фича) умеет декодировать ответ и искать в нём текст самостоятельно
         self.assertContains(response, 'itemey 1')
         self.assertContains(response, 'itemey 2')
+        
+        
+class NewListTest(TestCase):
+    """Тест нового списка"""
+    
+    def test_can_save_POST_request(self):
+        """Тест: можно сохранить POST-запрос"""
+        self.client.post('/lists/new', data={'item_text': 'A new list item'})
+        # сохраняется ли объект и его свойства через POST-запрос?
+        self.assertEqual(Item.objects.count(), 1)
+        new_item = Item.objects.first()
+        self.assertEqual(new_item.text, 'A new list item')
+        
+    def test_redirects_after_POST(self):
+        """Тест: перенаправление после POST-запроса"""
+        response = self.client.post('/lists/new', data={'item_text': 'A new list item'})   
+        # вставить сюда pdb и посмотреть response изнутри
+        self.assertRedirects(response, '/lists/one-of-a-kind-list-in-the-world/')
