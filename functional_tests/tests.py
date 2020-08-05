@@ -99,7 +99,7 @@ class NewVisitorTest(LiveServerTestCase):
         
         # Флавий начинает новый список, вводя новый элемент. Его список не менее
         # интересен, чем у Эрнеста
-        inputbox = self.browser.find_element_by_tag_name('id_new_item')
+        inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Разбить варваров на севере Британии')
         inputbox.send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Разбить варваров на севере Британии')
