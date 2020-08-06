@@ -467,3 +467,129 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1596626379851	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
 1596626390368	Marionette	INFO	Stopped listening on port 53299
+1596702700552	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofiles6XGQ4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702703427	Marionette	INFO	Listening on port 53733
+1596702703522	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702714909	Marionette	INFO	Stopped listening on port 53733
+1596702717272	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofile6PFYiI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702720375	Marionette	INFO	Listening on port 53797
+1596702720442	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702721290	Marionette	INFO	Stopped listening on port 53797
+1596702723681	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileHy64ak"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702726615	Marionette	INFO	Listening on port 53860
+1596702726656	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702727581	Marionette	INFO	Stopped listening on port 53860
+1596702766574	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileemlx56"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702769598	Marionette	INFO	Listening on port 53922
+1596702769661	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702780641	Marionette	INFO	Stopped listening on port 53922
+1596702785033	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileJt95x4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702790422	Marionette	INFO	Listening on port 53985
+1596702790479	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702791392	Marionette	INFO	Stopped listening on port 53985
+1596702793784	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileR9fBU4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702796523	Marionette	INFO	Listening on port 54068
+1596702796576	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702797477	Marionette	INFO	Stopped listening on port 54068
+1596702909928	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileM6u4Ek"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702912732	Marionette	INFO	Listening on port 54133
+1596702912792	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702923791	Marionette	INFO	Stopped listening on port 54133
+1596702926204	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofilefBshMB"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702929046	Marionette	INFO	Listening on port 54196
+1596702929068	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702929928	Marionette	INFO	Stopped listening on port 54196
+1596702932427	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileuT49fK"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596702935313	Marionette	INFO	Listening on port 54254
+1596702935404	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596702936262	Marionette	INFO	Stopped listening on port 54254
+1596702999587	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofile006SyV"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596703002374	Marionette	INFO	Listening on port 54319
+1596703002459	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596703013906	Marionette	INFO	Stopped listening on port 54319
+1596703016335	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofilecMyD6l"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596703019147	Marionette	INFO	Listening on port 54384
+1596703019184	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596703020038	Marionette	INFO	Stopped listening on port 54384
+1596703022435	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofilebnJbJY"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596703025382	Marionette	INFO	Listening on port 54443
+1596703025411	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596703026287	Marionette	INFO	Stopped listening on port 54443
+1596713296108	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofilelVXrYt"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713299020	Marionette	INFO	Listening on port 54810
+1596713299084	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713300544	Marionette	INFO	Stopped listening on port 54810
+1596713302149	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileshNhQY"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713305087	Marionette	INFO	Listening on port 54871
+1596713305138	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713305976	Marionette	INFO	Stopped listening on port 54871
+1596713308369	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofilea1aE70"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713311277	Marionette	INFO	Listening on port 54932
+1596713311348	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713312231	Marionette	INFO	Stopped listening on port 54932
+1596713364874	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileNyeczS"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713367758	Marionette	INFO	Listening on port 54998
+1596713367849	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713368854	Marionette	INFO	Stopped listening on port 54998
+1596713371251	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileJW5S8q"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713374115	Marionette	INFO	Listening on port 55062
+1596713374128	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713374986	Marionette	INFO	Stopped listening on port 55062
+1596713377394	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofilee2aI4a"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713380201	Marionette	INFO	Listening on port 55120
+1596713380260	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713381174	Marionette	INFO	Stopped listening on port 55120
+1596713401664	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileQeICZ5"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713404772	Marionette	INFO	Listening on port 55182
+1596713404840	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713406373	Marionette	INFO	Stopped listening on port 55182
+1596713408787	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileC0BpPT"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713411645	Marionette	INFO	Listening on port 55247
+1596713411659	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713412529	Marionette	INFO	Stopped listening on port 55247
+1596713414941	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofilerjZuGH"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596713417765	Marionette	INFO	Listening on port 55306
+1596713417839	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
+1596713418756	Marionette	INFO	Stopped listening on port 55306

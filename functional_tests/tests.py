@@ -106,10 +106,10 @@ class NewVisitorTest(LiveServerTestCase):
         
         # Флавий получает уникальный URL-адрес
         flawiy_list_url = self.browser.current_url
-        self.assertRegex(flawiy_list_url, '/list/.+')
+        self.assertRegex(flawiy_list_url, '/lists/(.+)')
         self.assertNotEqual(flawiy_list_url, ernest_list_url)
         
         # Опять таки нет ни следа от списка Эрнеста
-        page_text = self.browser.browser.find_element_by_tag_name('body').text
+        page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('Привести себя в порядок', page_text)
         self.assertIn('Разбить варваров на севере Британии', page_text)
