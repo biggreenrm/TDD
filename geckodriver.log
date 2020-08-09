@@ -730,3 +730,19 @@ JavaScript error: , line 0: uncaught exception: 2147500036
 JavaScript error: , line 0: uncaught exception: 2147500036
 JavaScript error: , line 0: uncaught exception: 2147500036
 JavaScript error: , line 0: uncaught exception: 2147500036
+1596909797245	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileLZLozO"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596909800264	Marionette	INFO	Listening on port 52670
+1596909800340	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596909800634	Marionette	INFO	Stopped listening on port 52670
+console.warn: services.settings: main/whats-new-panel sync interrupted by shutdown
+1596909803058	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileqxgYtx"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596909806051	Marionette	INFO	Listening on port 52727
+1596909806070	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596909806659	Marionette	INFO	Stopped listening on port 52727
+1596909810097	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/pw/xyl46fkj2p7d4l5yw91bdyk40000gn/T/rust_mozprofileVNGvSw"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1596909812933	Marionette	INFO	Listening on port 52782
+1596909813000	Marionette	WARN	TLS certificate errors will be ignored for this session
+1596909813327	Marionette	INFO	Stopped listening on port 52782
