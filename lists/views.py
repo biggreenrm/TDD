@@ -22,7 +22,6 @@ def view_list(request, list_id):
         except ValidationError:
             item.delete()
             error = "You can't have an empty list item"
-            print(error)
     return render(request, 'list.html', {'list': list_, 'error': error})
 
 def new_list(request):
