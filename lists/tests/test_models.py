@@ -1,10 +1,21 @@
 from django.test import TestCase
+from django.core.exceptions import ValidationError
 from lists.models import Item, List
 
 
 class ListAndItemModelTest(TestCase):
     """Тест модели элемента списка задач"""
     
+    def test_cannot_save_empty_list_items(self):
+        """Тест: нельзя добавлять пустые элементы списков"""
+        list_ = List.objects.create()
+        item = Item(list=list_, text='')
+        # не совсем понимаю как это работает, нужно разбираться
+        with self.assertRaises(ValidationError):
+            item.save()
+            # ручной метод валидации (принудительный?)
+            item.full_clean()
+            
     def test_saving_and_retrieving_items(self):
         """Тест сохранения и получения элементов списка""" 
         list_ = List()
