@@ -13,16 +13,16 @@ class ItemValidationTest(FunctionalTest):
         self.browser.get(self.live_server_url)
         self.get_item_input_box().send_keys(Keys.ENTER)
         
-        # Домашняя страница обновляется, и появляется сообщение об ошибке,
-        # которое говорит, что элементы списка не должны быть пустыми
-        self.wait_for(lambda: self.assertEqual(
-            self.browser.find_element_by_css_selector('.has-error').text,
-            "You can't have an empty list item"
-        ))
+        # Браузер перехватывает запрос и не загружает странциу со списком
+        self.wait_for(lambda: self.browser.find_element_by_css_selector(
+            '#id_text:invalid'))
         
         # Теперь Эрнест уже пробует по-нормальному что-то добавить
-        # Должно сработать
         self.get_item_input_box().send_keys('Scratch a turnip')
+        self.wait_for(lambda: self.browser.find_element_by_css_selector(
+            '#id_text:valid'))
+        
+        # и может отправить форму успешно
         self.get_item_input_box().send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Scratch a turnip')
         
@@ -31,13 +31,14 @@ class ItemValidationTest(FunctionalTest):
         self.get_item_input_box().send_keys(Keys.ENTER)
         
         # Результат такой же
-        self.wait_for(lambda: self.assertEqual(
-            self.browser.find_element_by_css_selector('.has-error').text,
-            "You can't have an empty list item"
-        ))
+        self.wait_for_row_in_list_table('1: Scratch a turnip')
+        self.wait_for(lambda: self.browser.find_element_by_css_selector(
+            '#id_text:invalid'))
         
         # И он может исправить его, заполнив нейким текстом
         self.get_item_input_box().send_keys('Make tea')
+        self.wait_for(lambda: self.browser.find_element_by_css_selector(
+            '#id_text:valid'))
         self.get_item_input_box().send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Scratch a turnip')
         self.wait_for_row_in_list_table('2: Make tea')
