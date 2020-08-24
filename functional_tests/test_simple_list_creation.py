@@ -20,7 +20,7 @@ class NewVisitorTest(FunctionalTest):
         self.assertIn('To-Do', header_text)
 
         # Ему предлагают ввести в список дело, которым нельзя пренебречь
-        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox = self.get_item_input_box()
         self.assertEqual(
             inputbox.get_attribute('placeholder'),
             'Enter a to-do item'
@@ -37,7 +37,7 @@ class NewVisitorTest(FunctionalTest):
         self.wait_for_row_in_list_table('1: Привести себя в порядок')
         # Текстовое поле по-прежнему приглашает Эрнеста сделать запись 
         # Что ж, пора "Убрать весь хлам на кухне"
-        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox = self.get_item_input_box()
         inputbox.send_keys('Убрать весь хлам на кухне')
         inputbox.send_keys(Keys.ENTER)
         
@@ -51,7 +51,7 @@ class NewVisitorTest(FunctionalTest):
         
         # Эрнест начинает новый список
         self.browser.get(self.live_server_url)
-        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox = self.get_item_input_box()
         inputbox.send_keys('Привести себя в порядок')
         inputbox.send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Привести себя в порядок')
@@ -75,7 +75,7 @@ class NewVisitorTest(FunctionalTest):
         
         # Флавий начинает новый список, вводя новый элемент. Его список не менее
         # интересен, чем у Эрнеста
-        inputbox = self.browser.find_element_by_id('id_new_item')
+        inputbox = self.get_item_input_box()
         inputbox.send_keys('Разбить варваров на севере Британии')
         inputbox.send_keys(Keys.ENTER)
         self.wait_for_row_in_list_table('1: Разбить варваров на севере Британии')
