@@ -8,6 +8,7 @@ from django.template.loader import render_to_string
 # first-party
 from lists.views import home_page
 from lists.models import Item, List
+from lists.forms import ItemForm
 
         
 class HomePageTest(TestCase):
@@ -17,6 +18,12 @@ class HomePageTest(TestCase):
         '''Тест: домашняя страница возращает правильный html'''
         response = self.client.get('/')
         self.assertTemplateUsed(response, 'home.html')
+    
+    def test_home_page_uses_item_form(self):
+        """Тест: домашняя страница использует правильную форму"""
+        response = self.client.get('/')
+        # IsInstance проверяет соответствует ли проверяемый аргумент классу (второй аргумент)
+        self.assertIsInstance(response.context['form'], ItemForm)
 
 
 class ListViewTest(TestCase):
