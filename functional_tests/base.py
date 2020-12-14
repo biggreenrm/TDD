@@ -5,6 +5,11 @@ from selenium.common.exceptions import WebDriverException
 import time
 import os
 
+
+"""
+Functional test via Selenium
+"""
+
 class FunctionalTest(StaticLiveServerTestCase):
     """Функциональный тест"""
     
