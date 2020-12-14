@@ -1208,3 +1208,40 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 208: Error: Invalid autocomplete selectedIndex
 1598271212402	Marionette	INFO	Stopped listening on port 52067
 JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1607959135326	geckodriver	INFO	Listening on 127.0.0.1:49790
+1607959136315	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/78/nzcj1kxj5gbc45vxw549rb580000gp/T/rust_mozprofileS4z6jQ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607959140385	Marionette	INFO	Listening on port 49802
+1607959140454	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 235: Error: Invalid autocomplete selectedIndex
+1607959141330	Marionette	INFO	Stopped listening on port 49802
+1607959142481	geckodriver	INFO	Listening on 127.0.0.1:49874
+1607959143493	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/78/nzcj1kxj5gbc45vxw549rb580000gp/T/rust_mozprofileHLnpoL"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607959146236	Marionette	INFO	Listening on port 49885
+1607959146279	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 235: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 235: Error: Invalid autocomplete selectedIndex
+1607959147233	Marionette	INFO	Stopped listening on port 49885
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1607959148200	geckodriver	INFO	Listening on 127.0.0.1:49944
+1607959149217	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/78/nzcj1kxj5gbc45vxw549rb580000gp/T/rust_mozprofile342i6g"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607959151608	Marionette	INFO	Listening on port 49955
+1607959151701	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 235: Error: Invalid autocomplete selectedIndex
+1607959153065	Marionette	INFO	Stopped listening on port 49955
+1607959153592	geckodriver	INFO	Listening on 127.0.0.1:50006
+1607959154603	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/78/nzcj1kxj5gbc45vxw549rb580000gp/T/rust_mozprofilel63F8S"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607959157133	Marionette	INFO	Listening on port 50017
+1607959157178	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 235: Error: Invalid autocomplete selectedIndex
+1607959157970	Marionette	INFO	Stopped listening on port 50017
+1607959158473	geckodriver	INFO	Listening on 127.0.0.1:50066
+1607959159487	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/78/nzcj1kxj5gbc45vxw549rb580000gp/T/rust_mozprofileKHcJZn"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1607959161922	Marionette	INFO	Listening on port 50077
+1607959162044	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 235: Error: Invalid autocomplete selectedIndex
+1607959162833	Marionette	INFO	Stopped listening on port 50077
