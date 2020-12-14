@@ -18,3 +18,8 @@ class ItemForm(forms.models.ModelForm):
         error_messages = {
             'text': {'required': EMPTY_ITEM_ERROR}
         }
+    
+    def save(self, for_list):
+        # .instance даёт доступ к объекту, которому принадлежит форма
+        self.instance.list = for_list
+        return super().save()
