@@ -27,7 +27,7 @@ class HomePageTest(TestCase):
 
 
 class ListViewTest(TestCase):
-    """Тест представдения списка"""
+    """Тест представления списка"""
 
     def post_invalid_input(self):
         """Отправляет недопустимый ввод"""
