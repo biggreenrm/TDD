@@ -7,7 +7,7 @@ import os
 
 
 """
-Functional test via Selenium
+Это - базовый функциональный тест. Несет в себе общий функционал для остальных функциональных тестов:
 """
 
 class FunctionalTest(StaticLiveServerTestCase):

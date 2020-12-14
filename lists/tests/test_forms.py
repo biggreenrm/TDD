@@ -3,6 +3,11 @@ from lists.forms import ItemForm, EMPTY_ITEM_ERROR
 from lists.models import Item, List
 
 
+"""
+Это набор модульных тестов для форм. Тестируется само их наличие, использование пустых форм, сохраняют ли они данные
+внутрь базы.
+"""
+
 class ItemFormTest(TestCase):
     """Тест формы для элемента списка"""
     

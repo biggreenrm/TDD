@@ -3,6 +3,11 @@ from django.core.exceptions import ValidationError
 from lists.models import Item, List
 
 
+"""
+Это - набор модульных тестов для моделей. Они проверяют отсутствие возможности сохранить пустых дел,
+возможность сохранять дела в списки, получение абсолютного адреса списков.
+"""
+
 class ListAndItemModelTest(TestCase):
     """Тест модели элемента списка задач"""
     

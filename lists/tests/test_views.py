@@ -10,6 +10,10 @@ from lists.views import home_page
 from lists.models import Item, List
 from lists.forms import ItemForm, EMPTY_ITEM_ERROR
 
+
+"""
+Это - набор модульных тестов для представлений. И их тут много.
+"""
         
 class HomePageTest(TestCase):
     """Тест: домашняя страница"""
