@@ -22,7 +22,7 @@ class ListAndItemModelTest(TestCase):
             item.full_clean()
             
     def test_saving_and_retrieving_items(self):
-        """Тест сохранения и получения элементов списка""" 
+        """Тест: сохранения и получения элементов списка""" 
         list_ = List()
         list_.save()
         
@@ -50,6 +50,23 @@ class ListAndItemModelTest(TestCase):
         self.assertEqual(second_saved_item.list, list_)
     
     def test_get_absolute_url(self):
-        """Тест: получен абсолютный url"""
+        """Тест: абсолютный url доступен и его можно получить"""
         list_ = List.objects.create()
         self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
+
+    def test_duplicate_items_are_invalid(self):
+        """Тест: добавление одинаковых элементов в список недопустимо"""
+        list_ = List.objects.create()
+        Item.objects.create(list=list_, text='bla')
+        with self.assertRaises(ValidationError):
+            item = Item(list=list_, text='bla')
+            item.full_clean()
+
+    def test_CAN_save_same_item_to_different_lists(self):
+        """Тест: можно сохранять одинаковые элементы в разные списки"""
+        list1 = List.objects.create()
+        list2 = List.objects.create()
+        Item.objects.create(list=list1, text='bla')
+        item = Item(list=list2, text='bla')
+        item.full_clean() # не должен поднять исключение
+        
