@@ -21,4 +21,4 @@ class Item(models.Model):
         # Задачи сортируются по порядку добавления от раннего к позднему
         ordering = ('id',)
         # В одном списке не может быть одинаковых задач
-        # unique_together = ('list', 'text')
+        unique_together = ('list', 'text')
