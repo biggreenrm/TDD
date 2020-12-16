@@ -8,11 +8,26 @@ from lists.models import Item, List
 возможность сохранять дела в списки, получение абсолютного адреса списков.
 """
 
-class ListAndItemModelTest(TestCase):
-    """Тест модели элемента списка задач"""
+
+class ListModelTest(TestCase):
+    """Тесты для модели списка задач"""
+
+    def test_get_absolute_url(self):
+        """Тест: абсолютный url доступен и его можно получить"""
+        list_ = List.objects.create()
+        self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
+
+
+class ItemModelTest(TestCase):
+    """Тесты для модели задачи в списке задач"""
+
+    def test_default_text(self):
+        """Тест: заданного по-умолчанию текста""" 
+        item = Item()
+        self.assertEqual(item.text, '')
     
     def test_cannot_save_empty_list_items(self):
-        """Тест: нельзя добавлять пустые элементы списков"""
+        """Тест: нельзя добавлять пустые задачи в список"""
         list_ = List.objects.create()
         item = Item(list=list_, text='')
         # не совсем понимаю как это работает, нужно разбираться
@@ -20,40 +35,15 @@ class ListAndItemModelTest(TestCase):
             item.save()
             # ручной метод валидации (принудительный?)
             item.full_clean()
-            
-    def test_saving_and_retrieving_items(self):
-        """Тест: сохранения и получения элементов списка""" 
-        list_ = List()
-        list_.save()
-        
-        first_item = Item()
-        first_item.text = 'The first (ever) list item'
-        first_item.list = list_
-        first_item.save()
-        
-        second_item = Item()
-        second_item.text = 'Item the second'
-        second_item.list = list_
-        second_item.save()
-        
-        saved_list = List.objects.first()
-        self.assertEqual(saved_list, list_)
-        
-        saved_items = Item.objects.all()
-        self.assertEqual(saved_items.count(), 2)
-        
-        first_saved_item = saved_items[0]
-        second_saved_item = saved_items[1]
-        self.assertEqual(first_saved_item.text, 'The first (ever) list item')
-        self.assertEqual(first_saved_item.list, list_)
-        self.assertEqual(second_saved_item.text, 'Item the second')
-        self.assertEqual(second_saved_item.list, list_)
     
-    def test_get_absolute_url(self):
-        """Тест: абсолютный url доступен и его можно получить"""
+    def test_item_is_related_to_list(self):
+        """Тест: задача связана со списком"""
         list_ = List.objects.create()
-        self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
-
+        item = Item()
+        item.list = list_
+        item.save()
+        self.assertIn(item, list_.item_set.all())
+    
     def test_duplicate_items_are_invalid(self):
         """Тест: добавление одинаковых элементов в список недопустимо"""
         list_ = List.objects.create()
